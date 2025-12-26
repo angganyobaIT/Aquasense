@@ -35,7 +35,7 @@ html, body {
 
 .nav-menu h1 {
     font-size: 15px;
-    color: #1a00007f;
+    color: rgb(0, 50, 55);
     font-family: Poppins, sans-serif;
     cursor: pointer;
     margin-right:20px;
@@ -45,7 +45,7 @@ html, body {
 .nav-menu button {
     padding: 10px 20px;
     background-color: rgb(175, 235, 0);
-    color: #1a00007f;
+    color: rgb(0, 50, 55);
     font-weight: bold;
     border: none;
     border-radius: 15px;
@@ -93,10 +93,12 @@ html, body {
     margin-top: 15px;
     background-color: rgb(175, 235, 0);
     padding: 15px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
     font-family: Poppins, sans-serif;
     font-size: 20px;
     border-radius: 30px;
-
     font-weight: bold;
     cursor: pointer;
 }
@@ -116,7 +118,7 @@ html, body {
     gap: 30px;
 
     padding: 80px 80px;
-    background-color: rgb(0, 50, 55); /* menyatu dengan section */
+    background-color: rgb(0, 50, 55); 
 }
 
 .card {
@@ -157,6 +159,8 @@ html, body {
     font-size: 0.95em;
     line-height: 1.6;
     color: #555;
+    font-family: Poppins, sans-serif;
+
 }
 
 @media (max-width: 1024px) {
