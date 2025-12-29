@@ -99,7 +99,7 @@ html, body {
     font-family: Poppins, sans-serif;
     font-size: 20px;
     border-radius: 30px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
 }
 
@@ -176,6 +176,89 @@ html, body {
     }
 }
 
+.content2 {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(230, 235, 235);
+    
+}
+
+.title-section {
+    font-family: Poppins, sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: rgb(0, 50, 55); 
+
+}
+
+.wrap-content2 {
+    display: flex;
+    justify-content: center; 
+    width:80%;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.user-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 300px; /* Lebar kartu */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+}
+
+.user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4CAF50;
+}
+
+.comment {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin: 15px 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.user-name {
+    font-family: Poppins, sans-serif;
+    margin-top: auto; 
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.user-role {
+    font-family: Poppins, sans-serif;
+
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+    text-transform: uppercase;
+}
+.user-info {
+    font-family: Poppins, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    align-items: center;
+}
 
 
 
