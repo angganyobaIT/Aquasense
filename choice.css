@@ -602,5 +602,152 @@ html, body {
     transform: scale(1.1);
 }
 
+.footer {
+    background-color: #0b2e2b; /* Hijau tua elegan */
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 60px;
+    margin-top: 50px;
+}
+
+/* BAGIAN ATAS (Layout Flexbox) */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Menyebar kolom ke kiri, tengah, kanan */
+    flex-wrap: wrap; /* Agar responsif di HP */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1; /* Setiap kolom berbagi ruang */
+    min-width: 250px; /* Lebar minimum agar tidak gepeng di layar kecil */
+}
+
+/* --- Styling Kolom 1: Brand --- */
+.brand-section h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #4CAF50; /* Aksen hijau terang */
+}
+
+.brand-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc; /* Abu-abu terang agar nyaman dibaca */
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Membuat icon hitam menjadi putih (opsional) */
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-media img:hover {
+    transform: scale(1.2);
+}
+
+/* --- Styling Kolom 2: Links --- */
+.links-section h4, .support-section h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.links-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-section ul li {
+    margin-bottom: 10px;
+}
+
+.links-section a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.links-section a:hover {
+    color: #4CAF50;
+    padding-left: 5px; /* Efek geser sedikit saat di-hover */
+}
+
+/* --- Styling Kolom 3: Support --- */
+.support-section p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #388E3C;
+}
+
+/* BAGIAN BAWAH (Copyright) */
+.footer-bottom {
+    background-color: #061f1d; /* Warna lebih gelap sedikit */
+    padding: 20px;
+    display: flex;
+    justify-content: space-around; /* Jarak merata */
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 13px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom p {
+    color: #888;
+    margin: 5px 0;
+}
+
+.legal-links a {
+    color: #888;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.legal-links a:hover {
+    color: #fff;
+}
+
 
 
