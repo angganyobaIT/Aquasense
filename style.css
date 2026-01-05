@@ -14,6 +14,7 @@ html, body {
     position: relative;
 }
 
+/* Navbar Design Section */
 .navbar {
     height: 80px;
     display: flex;
@@ -37,8 +38,6 @@ html, body {
     padding-left: 20px;
   
     border-left: #555 2px solid;
-
-
 }
 .nav-menu {
     display: flex;
@@ -53,6 +52,12 @@ html, body {
     cursor: pointer;
     margin-right:20px;
     margin-top: 10px;
+    transition: 0.3s; 
+}
+.nav-menu h1:hover {
+    color: rgb(175, 235, 0);
+    transition: 0.3s;
+
 }
 
 .nav-menu button {
@@ -65,8 +70,14 @@ html, body {
     cursor: pointer;
     font-size: 15px;
     font-family: Poppins, sans-serif;
+    transition: 0.3s;
+}
+.nav-menu button:hover {
+    background-color: rgb(0, 50, 55);
+    color: rgb(175, 235, 0);
 }
 
+/* Opening Design Section */
 .content1{
     background-color: rgb(0, 50, 55);
     height: 90%;
@@ -101,7 +112,7 @@ html, body {
 }
 
 .content1 button{
-    border:none;
+    border:1px solid rgb(0, 50, 55);
     color: rgb(0, 50, 55);
     margin-top: 15px;
     background-color: rgb(175, 235, 0);
@@ -114,6 +125,12 @@ html, body {
     border-radius: 30px;
     font-weight: 700;
     cursor: pointer;
+    transition:0.3s;
+}
+.content1 button:hover {
+    background-color: rgb(0, 50, 55);
+    color: rgb(175, 235, 0);
+    border-color: rgb(175, 235, 0);
 }
 
 .content1 p {
@@ -125,130 +142,8 @@ html, body {
     font-weight: 100;
 }
 
-/* Container Utama */
-.section-reasons {
-    background-color: rgb(0, 50, 55);
-    padding: 60px 40px;
-    text-align: center;
-}
 
-.section-title {
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 50px;
-    font-weight: 700;
-}
-
-.out-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif */
-    gap: 50px; /* Jarak antar kartu diperlebar agar siku tidak bertabrakan */
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* KARTU UTAMA */
-.in-card {
-    position: relative; /* PENTING: Menjadi patokan siku-siku */
-    background: #ffffff;
-    border-radius: 20px; /* Sudut kartu bulat */
-    padding: 30px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-    z-index: 1; /* Agar kartu berada di atas elemen dekorasi jika perlu */
-}
-
-.in-card:hover {
-    transform: translateY(-10px); /* Efek naik saat dihover */
-}
-
-/* --- LOGIKA PEMBUATAN SIKU (BRACKETS) --- */
-
-/* Siku Pojok Kanan Atas */
-.in-card::before {
-    content: '';
-    position: absolute;
-    top: -15px;    /* Keluar sedikit ke atas */
-    right: -15px;  /* Keluar sedikit ke kanan */
-    width: 70px;   /* Panjang garis horizontal */
-    height: 70px;  /* Panjang garis vertikal */
-    border-top: 5px solid rgb(175, 235, 0);   /* Garis Atas */
-    border-right: 5px solid rgb(175, 235, 0); /* Garis Kanan */
-    border-radius: 0 30px 0 0; /* Melengkungkan sudut siku */
-    pointer-events: none; /* Agar tidak mengganggu klik */
-}
-
-/* Siku Pojok Kiri Bawah */
-.in-card::after {
-    content: '';
-    position: absolute;
-    bottom: -15px; /* Keluar sedikit ke bawah */
-    left: -15px;   /* Keluar sedikit ke kiri */
-    width: 70px;
-    height: 70px;
-    border-bottom: 5px solid rgb(175, 235, 0); /* Garis Bawah */
-    border-left: 5px solid rgb(175, 235, 0);   /* Garis Kiri */
-    border-radius: 0 0 0 30px; /* Melengkungkan sudut siku */
-    pointer-events: none;
-}
-
-/* --- Styling Isi Kartu --- */
-
-.icon-box {
-    width: 60px;
-    height: 60px;
-    background-color: rgb(0, 50, 55); /* Kotak hijau tua di belakang ikon */
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.icon-box img {
-    width: 30px;
-    height: 30px;
-    filter: invert(1); /* Membuat ikon hitam menjadi putih */
-}
-
-.in-card h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.3em;
-    font-weight: 700;
-    color: rgb(0, 50, 55);
-    margin: 0;
-}
-
-.in-card p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9em;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.read-more {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 0.9em;
-    color: rgb(0, 50, 55);
-    text-decoration: none;
-    margin-top: auto; /* Mendorong link ke paling bawah */
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: color 0.3s;
-}
-
-.read-more:hover {
-    color: rgb(175, 235, 0); /* Berubah hijau terang saat hover */
-}
-
+/* Promotion Section Design */
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -309,13 +204,129 @@ html, body {
     }
 }
 
-.content2 {
-    padding: 50px 20px;
+/* Reasons Section Design */
+.section-reasons {
+    background-color: rgb(0, 50, 55);
+    padding: 60px 40px;
     text-align: center;
-    background: rgb(3, 122, 122);
 }
 
+.section-title {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
 
+.out-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif */
+    gap: 50px; /* Jarak antar kartu diperlebar agar siku tidak bertabrakan */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* KARTU UTAMA */
+.in-card {
+    position: relative; /* Menjadi patokan siku-siku */
+    background: #ffffff;
+    border-radius: 20px; /* Sudut kartu bulat */
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    z-index: 1; /* Agar kartu berada di atas elemen dekorasi jika perlu */
+}
+
+.in-card:hover {
+    transform: translateY(-10px); /* Efek naik saat dihover */
+}
+
+/* Siku Pojok Kanan Atas */
+.in-card::before {
+    content: '';
+    position: absolute;
+    top: -15px;    /* Keluar sedikit ke atas */
+    right: -15px;  /* Keluar sedikit ke kanan */
+    width: 70px;   /* Panjang garis horizontal */
+    height: 70px;  /* Panjang garis vertikal */
+    border-top: 5px solid rgb(175, 235, 0);   /* Garis Atas */
+    border-right: 5px solid rgb(175, 235, 0); /* Garis Kanan */
+    border-radius: 0 30px 0 0; /* Melengkungkan sudut siku */
+    pointer-events: none; /* Agar tidak mengganggu klik */
+}
+
+/* Siku Pojok Kiri Bawah */
+.in-card::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; /* Keluar sedikit ke bawah */
+    left: -15px;   /* Keluar sedikit ke kiri */
+    width: 70px;
+    height: 70px;
+    border-bottom: 5px solid rgb(175, 235, 0); /* Garis Bawah */
+    border-left: 5px solid rgb(175, 235, 0);   /* Garis Kiri */
+    border-radius: 0 0 0 30px; /* Melengkungkan sudut siku */
+    pointer-events: none;
+}
+
+/* --- Styling Isi Kartu --- */
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(0, 50, 55); 
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.icon-box img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); 
+}
+
+.in-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: rgb(0, 50, 55);
+    margin: 0;
+}
+
+.in-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: rgb(0, 50, 55);
+    text-decoration: none;
+    margin-top: auto; /* Mendorong link ke paling bawah */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: rgb(175, 235, 0);
+}
+
+/* User Comments Section Design */
 .content3 {
     padding: 50px 20px;
     text-align: center;
@@ -347,7 +358,7 @@ html, body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    width: 300px; /* Lebar kartu */
+    width: 300px;
     display: flex;
     flex-direction: column; 
     align-items: center;
@@ -363,7 +374,7 @@ html, body {
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #4CAF50;
+    border: 3px solid rgb(0, 50, 55);
 }
 
 .comment {
@@ -399,7 +410,8 @@ html, body {
     align-items: center;
 }
 
-.section4 {
+/* Hidroponik Kit Catalog Section Design */
+.content4 {
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -407,25 +419,25 @@ html, body {
     padding: 40px 20px;
     font-family: 'Poppins', sans-serif;
     color: rgb(0, 50, 55);
-    border-top: 1px solid rgba(145, 144, 144, 0.4);
+    border-top: 1px solid rgba(145, 144, 144, 0.4);;
     text-align: center;
+
 }
 
-.section4 h1 {
+.content4 h1 {
     font-size: 2.5em; 
     font-weight: 800;
     margin-bottom: 40px;
     color: rgb(0, 50, 55);
 }
 
-.section4-choice {
+.content4-choice {
     display: flex;
     justify-content: center;
     gap: 30px; 
     flex-wrap: wrap; 
 }
 
-/* --- STYLE DASAR TOMBOL --- */
 .btn-hydro {
     text-decoration: none;
     padding: 15px 40px;
@@ -436,7 +448,6 @@ html, body {
     position: relative;
     letter-spacing: 0.5px;
     
-    /* Bentuk Daun Organik (Kiri-Atas & Kanan-Bawah Tumpul, Sisanya Lancip) */
     border-radius: 10px 30px 10px 30px; 
 }
 
@@ -449,15 +460,14 @@ html, body {
 }
 
 .btn-primary:hover {
-    transform: translateY(-5px) scale(1.02); /* Naik & Membesar sedikit */
+    transform: translateY(-5px) scale(1.02); 
     box-shadow: 0 15px 30px rgba(175, 235, 0, 0.5);
-    background-color: rgb(185, 245, 10); /* Warna sedikit lebih terang */
-    
-    /* Ubah bentuk sudut saat hover agar terlihat dinamis */
+    background-color: rgb(185, 245, 10); 
+
     border-radius: 30px 10px 30px 10px; 
 }
 
-/* --- TOMBOL 2: SECONDARY (Sayuran) --- */
+/* --- TOMBOL 2: Sayuran --- */
 .btn-secondary {
     background-color: transparent;
     color: rgb(0, 50, 55);
@@ -473,7 +483,6 @@ html, body {
     border-radius: 30px 10px 30px 10px; 
 }
 
-/* Container Utama agar Center */
 .catalog-container {
     display: flex;
     justify-content: center;
@@ -481,14 +490,13 @@ html, body {
     padding: 40px 20px;
 }
 
-/* Grid Layout untuk Katalog */
 .catalog {
     display: grid;
-    /* Membuat kolom responsif: minimal lebar 250px, kalau muat nambah kolom */
+    /*kolom responsif */
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
     gap: 30px;
     width: 100%;
-    max-width: 1200px; /* Membatasi lebar maksimal agar rapi */
+    max-width: 1200px; 
 }
 
 /* --- STYLE KARTU --- */
@@ -506,24 +514,22 @@ html, body {
 .catalog-card:hover {
     transform: translateY(-8px); /* Efek naik saat hover */
     box-shadow: 0 15px 30px rgba(0, 50, 55, 0.15);
-    border-color: rgb(175, 235, 0); /* Border menyala hijau saat hover */
 }
 
 /* --- GAMBAR --- */
 .img-box {
     width: 100%;
-    height: 180px; /* Tinggi gambar fixed agar seragam */
+    height: 180px;
     position: relative;
-    background-color: #eee;
 }
 
 .img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* KUNCI: Gambar tidak akan gepeng */
+    object-fit: cover; 
 }
 
-/* Badge Terjual (Menempel di gambar) */
+/* Badge Terjual */
 .badge-sold {
     position: absolute;
     top: 10px;
@@ -554,7 +560,7 @@ html, body {
 
 /* Area Harga & Tombol */
 .price-action {
-    margin-top: auto; /* Mendorong ke paling bawah kartu */
+    margin-top: auto; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -601,11 +607,11 @@ html, body {
     transform: scale(1.1);
 }
 
-/* Styling Container Utama Footer */
+/* FOOTER CONTENT DESIGN */
 .footer {
-    background-color: #0b2e2b; /* Hijau tua elegan */
-    color: #fff;
+    background-color: rgb(0, 50, 55); /* Hijau tua elegan */
     font-family: 'Poppins', sans-serif;
+    color: white;
     padding-top: 60px;
     margin-top: 50px;
 }
@@ -622,22 +628,23 @@ html, body {
 }
 
 .footer-section {
-    flex: 1; /* Setiap kolom berbagi ruang */
-    min-width: 250px; /* Lebar minimum agar tidak gepeng di layar kecil */
+    flex: 1; 
+    min-width: 250px; 
 }
 
 /* --- Styling Kolom 1: Brand --- */
 .brand-section h3 {
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 20px;
-    color: #4CAF50; /* Aksen hijau terang */
+    margin-bottom: 15px;
+    color:rgb(175, 235, 0); /* Aksen hijau terang */
 }
 
 .brand-section p {
     font-size: 14px;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #ccc; /* Abu-abu terang agar nyaman dibaca */
+    color:#ccc ; 
     margin-bottom: 20px;
 }
 
@@ -647,9 +654,7 @@ html, body {
 }
 
 .social-media img {
-    width: 24px;
     height: 24px;
-    filter: invert(1); /* Membuat icon hitam menjadi putih (opsional) */
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -660,6 +665,7 @@ html, body {
 
 /* --- Styling Kolom 2: Links --- */
 .links-section h4, .support-section h4 {
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     margin-bottom: 20px;
     position: relative;
@@ -676,19 +682,21 @@ html, body {
 
 .links-section a {
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
     color: #ccc;
     font-size: 14px;
-    transition: color 0.3s;
+    transition: color 0.5s;
 }
 
 .links-section a:hover {
-    color: #4CAF50;
-    padding-left: 5px; /* Efek geser sedikit saat di-hover */
+    color: rgb(175, 235, 0);
+    
 }
 
 /* --- Styling Kolom 3: Support --- */
 .support-section p {
     font-size: 14px;
+    font-family: 'Poppins', sans-serif;
     color: #ccc;
     margin-bottom: 15px;
 }
@@ -700,6 +708,7 @@ html, body {
 
 .input-group input {
     padding: 10px;
+    font-family: 'poppins', sans-serif;
     border-radius: 5px;
     border: none;
     width: 100%;
@@ -708,8 +717,9 @@ html, body {
 
 .btn-submit {
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    font-family: poppins, sans-serif;
+    background-color:rgb(175, 235, 0);
+    color: rgb(0, 50, 55);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -718,12 +728,13 @@ html, body {
 }
 
 .btn-submit:hover {
-    background-color: #388E3C;
+    color:rgb(175, 235, 0);
+    background-color: rgb(0, 50, 55);
 }
 
-/* BAGIAN BAWAH (Copyright) */
+/* Copyright */
 .footer-bottom {
-    background-color: #061f1d; /* Warna lebih gelap sedikit */
+    background-color: #061f1d; 
     padding: 20px;
     display: flex;
     justify-content: space-around; /* Jarak merata */
@@ -735,16 +746,19 @@ html, body {
 
 .footer-bottom p {
     color: #888;
+    font-family: poppins, sans-serif;
     margin: 5px 0;
 }
 
 .legal-links a {
     color: #888;
+    font-family: 'poppins', sans-serif;
     text-decoration: none;
     margin-left: 20px;
     transition: color 0.3s;
 }
 
 .legal-links a:hover {
-    color: #fff;
+    color:rgb(175, 235, 0);
+
 }
