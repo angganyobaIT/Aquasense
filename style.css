@@ -15,49 +15,57 @@ html, body {
 }
 
 /* Navbar Design Section */
+/* --- Desktop Styles (Default) --- */
 .navbar {
     height: 80px;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Memisahkan logo dan menu */
     background: rgba(230, 235, 235);
     padding: 0 40px;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Mengelompokkan Logo dan Judul agar rapi */
+.logo-group {
+    display: flex;
+    align-items: center;
 }
 
 .navbar img {
-    height: 70px;
-    margin-left: 20px;
+    height: 60px; /* Sedikit disesuaikan agar proporsional */
 }
+
 .navbar h3 {
     font-size: 1em;
     color: rgb(0, 50, 55);
     font-family: Poppins, sans-serif;
     font-weight: 700;
-    margin-left: 1px;
+    margin-left: 20px;
     text-transform: uppercase;
-    padding: 5px;
     padding-left: 20px;
-  
     border-left: #555 2px solid;
 }
+
 .nav-menu {
     display: flex;
-    margin-left: auto; /* INI KUNCINYA */
-    gap: 20px;
+    align-items: center;
+    gap: 30px;
 }
 
-.nav-menu h1 {
+/* Mengganti h1 menjadi a agar semantik benar */
+.nav-link {
     font-size: 15px;
     color: rgb(0, 50, 55);
     font-family: Poppins, sans-serif;
-    cursor: pointer;
-    margin-right:20px;
-    margin-top: 10px;
+    text-decoration: none; /* Hilangkan garis bawah link */
+    font-weight: 600;
     transition: 0.3s; 
 }
-.nav-menu h1:hover {
-    color: rgb(175, 235, 0);
-    transition: 0.3s;
 
+.nav-link:hover {
+    color: rgb(175, 235, 0);
 }
 
 .nav-menu button {
@@ -68,13 +76,80 @@ html, body {
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
     font-family: Poppins, sans-serif;
     transition: 0.3s;
 }
+
 .nav-menu button:hover {
     background-color: rgb(0, 50, 55);
     color: rgb(175, 235, 0);
+}
+
+/* Styling Tombol Hamburger (Default: Hidden) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: rgb(0, 50, 55);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- MOBILE RESPONSIVE (Max-Width 768px) --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px; /* Padding lebih kecil di HP */
+    }
+
+    /* Munculkan tombol hamburger */
+    .hamburger {
+        display: block; 
+    }
+
+    /* Sembunyikan tombol hamburger saat aktif (opsional animasi X) */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Menu Navigasi di Mobile */
+    .nav-menu {
+        position: fixed;
+        left: -100%; /* Sembunyikan menu di kiri layar */
+        top: 80px; /* Muncul di bawah navbar */
+        flex-direction: column; /* Susun ke bawah */
+        background-color: rgba(230, 235, 235);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+
+    /* Class ini akan ditambahkan lewat JS saat diklik */
+    .nav-menu.active {
+        left: 0; /* Geser menu masuk ke layar */
+    }
+
+    .nav-menu .nav-link {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+    
+    .logo-group h3 {
+        font-size: 0.9em; /* Kecilkan font logo di HP */
+    }
 }
 
 /* Opening Design Section */
